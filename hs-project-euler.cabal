@@ -1,0 +1,101 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 1b5e089edc0647cc3e9bd63345dc9d1f8ebf5d2c26bfc377dfaf76d4ec47a5ad
+
+name:           hs-project-euler
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/hs-project-euler#readme>
+homepage:       https://github.com/githubuser/hs-project-euler#readme
+bug-reports:    https://github.com/githubuser/hs-project-euler/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/hs-project-euler
+
+library
+  exposed-modules:
+      Lib
+      Problem1
+      Problem2
+      Problem3
+      Problem4
+      Problem5
+  other-modules:
+      Paths_hs_project_euler
+  hs-source-dirs:
+      src
+  default-extensions:
+      NoImplicitPrelude
+      OverloadedStrings
+      PatternSynonyms
+      ViewPatterns
+      NumericUnderscores
+      NamedFieldPuns
+      FlexibleContexts
+      LambdaCase
+      PartialTypeSignatures
+  ghc-options: -Wall -Wno-type-defaults
+  build-depends:
+      base >=4.14.0.0 && <4.15
+    , relude
+  default-language: Haskell2010
+
+executable hs-project-euler-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_hs_project_euler
+  hs-source-dirs:
+      app
+  default-extensions:
+      NoImplicitPrelude
+      OverloadedStrings
+      PatternSynonyms
+      ViewPatterns
+      NumericUnderscores
+      NamedFieldPuns
+      FlexibleContexts
+      LambdaCase
+      PartialTypeSignatures
+  ghc-options: -Wall -Wno-type-defaults -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.14.0.0 && <4.15
+    , hs-project-euler
+    , relude
+  default-language: Haskell2010
+
+test-suite hs-project-euler-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_hs_project_euler
+  hs-source-dirs:
+      test
+  default-extensions:
+      NoImplicitPrelude
+      OverloadedStrings
+      PatternSynonyms
+      ViewPatterns
+      NumericUnderscores
+      NamedFieldPuns
+      FlexibleContexts
+      LambdaCase
+      PartialTypeSignatures
+  ghc-options: -Wall -Wno-type-defaults -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.14.0.0 && <4.15
+    , hs-project-euler
+    , relude
+  default-language: Haskell2010
