@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1b5e089edc0647cc3e9bd63345dc9d1f8ebf5d2c26bfc377dfaf76d4ec47a5ad
+-- hash: ac9db3dd930df6d571f5836b615cf5cb423bff2f30977540fed5ef7a12cb9951
 
 name:           hs-project-euler
 version:        0.1.0.0
@@ -47,9 +47,11 @@ library
       FlexibleContexts
       LambdaCase
       PartialTypeSignatures
+      TypeApplications
   ghc-options: -Wall -Wno-type-defaults
   build-depends:
       base >=4.14.0.0 && <4.15
+    , containers
     , relude
   default-language: Haskell2010
 
@@ -69,6 +71,7 @@ executable hs-project-euler-exe
       FlexibleContexts
       LambdaCase
       PartialTypeSignatures
+      TypeApplications
   ghc-options: -Wall -Wno-type-defaults -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.14.0.0 && <4.15
@@ -93,6 +96,7 @@ test-suite hs-project-euler-test
       FlexibleContexts
       LambdaCase
       PartialTypeSignatures
+      TypeApplications
   ghc-options: -Wall -Wno-type-defaults -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.14.0.0 && <4.15

@@ -1,7 +1,7 @@
 module Problem3 where
 
 import Relude
-import Relude.Extra (Foldable1(maximum1))
+-- import Relude.Extra (Foldable1(maximum1))
 
 isPrime :: Integer -> Bool
 isPrime 1 = True

@@ -33,6 +33,7 @@ default-extensions:
 - FlexibleContexts
 - LambdaCase
 - PartialTypeSignatures
+- TypeApplications
 
 ghc-options:
 - -Wall
@@ -40,6 +41,8 @@ ghc-options:
 
 library:
   source-dirs: src
+  dependencies:
+  - containers
 
 executables:
   hs-project-euler-exe:
