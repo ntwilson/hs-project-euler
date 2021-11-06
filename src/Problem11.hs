@@ -27,20 +27,27 @@ input =
   , [ 01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48 ]
   ]
 
+horizontalGroups :: [[Integer]]
 horizontalGroups = window 4 =<< input
+verticalGroups :: [[Integer]]
 verticalGroups = window 4 =<< transpose input
 
+backslashDiagonals :: [[Integer]]
 backslashDiagonals = 
   window 4 input <&> imap drop <&> transpose <&> filter ((== 4) . length) & concat
 
 
+forwardSlashDiagonals :: [[Integer]]
 forwardSlashDiagonals = 
   window 4 input <&> reverse <&> imap drop <&> transpose <&> filter ((== 4) . length) & concat
 
+imap :: (Num a, Enum a) => (a -> b -> c) -> [b] -> [c]
 imap fn = zipWith fn [0..] 
 
+products :: [Integer]
 products = product <$> (horizontalGroups ++ verticalGroups ++ backslashDiagonals ++ forwardSlashDiagonals)
 
+ans :: Maybe Integer
 ans = viaNonEmpty maximum1 products 
 
 
