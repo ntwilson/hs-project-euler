@@ -8,4 +8,5 @@ primes = 2:3:filter filterCandidate [5..]
     filterCandidate x = 
       primes & takeWhile (\p -> p * p <= x) & all (\p -> x `mod` p /= 0)
 
+ans :: Int
 ans = primes & takeWhile (<= 2_000_000) & sum

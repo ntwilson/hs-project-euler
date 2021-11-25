@@ -28,6 +28,10 @@ factors i = do
   guard $ remainder == 0
   [lower, upper]
 
+nFactors :: Int -> Int 
+nFactors i = 
+  length [lower | lower <- [1 .. squareRoot i] , i `mod` lower == 0] * 2
+
 triangleNumbers :: [Int]
 triangleNumbers = triangle <$> [1..]
   where
@@ -35,4 +39,4 @@ triangleNumbers = triangle <$> [1..]
 
 firstTriangleWith500Divisors :: Maybe Int
 firstTriangleWith500Divisors = 
-  find ((>= 500) . length . factors) triangleNumbers
+  find ((>= 500) . nFactors) triangleNumbers

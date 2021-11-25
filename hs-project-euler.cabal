@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d81b48b60178b6f5322cf84819a8cd2209cc384a7cc5c6163db6f279b6926911
+-- hash: 0eccbff2d1b5aa914ddd6924d6c1b85716603e406ca762cfc93d15886dd91f10
 
 name:           hs-project-euler
 version:        0.1.0.0
@@ -32,6 +32,11 @@ library
       Problem10
       Problem11
       Problem12
+      Problem13
+      Problem14
+      Problem15
+      Problem16
+      Problem17
       Problem2
       Problem3
       Problem4
@@ -59,6 +64,7 @@ library
   build-depends:
       base >=4.14.0.0 && <4.15
     , containers
+    , memoize
     , relude
   default-language: Haskell2010
 

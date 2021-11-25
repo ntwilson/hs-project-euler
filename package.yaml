@@ -43,6 +43,7 @@ library:
   source-dirs: src
   dependencies:
   - containers
+  - memoize
 
 executables:
   hs-project-euler-exe:
